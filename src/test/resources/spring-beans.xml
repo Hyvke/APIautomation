@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd  
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<context:component-scan base-package="com" />
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<!-- <value>${env}</value> -->
+			<value>file:///home/rdp/AutomationInput/trishul.properties</value>
+		</property>
+	</bean>
+	
+
+	<bean id="targetEnv" class="java.lang.String">
+		<constructor-arg value="${targetEnv}"></constructor-arg>
+	</bean>
+	
+	<bean id="executionType" class="java.lang.String">
+		<constructor-arg value="${executionType}"></constructor-arg>
+	</bean>
+	<bean id="deviceLongID" class="java.lang.String">
+		<constructor-arg value="${deviceLongID}"></constructor-arg>
+	</bean>
+
+	<bean id="ITOMTestDataWorkBookName" class="java.lang.String">
+		<constructor-arg value="${ITOMTestDataWorkBookName}"></constructor-arg>
+	</bean>
+
+	<bean id="opsRamp_web_url" class="java.lang.String">
+		<constructor-arg value="${opsRamp_web_url}"></constructor-arg>
+	</bean>
+	
+	<bean id="root_folder" class="java.lang.String">
+		<constructor-arg value="${root_folder}"></constructor-arg>
+	</bean>
+	<bean id="api_folder" class="java.lang.String">
+		<constructor-arg value="${api_folder}"></constructor-arg>
+	</bean>
+	
+	<bean id="buildVersion" class="java.lang.String">
+		<constructor-arg value="${buildVersion}"></constructor-arg>
+	</bean>
+
+	<bean id="clientId" class="java.lang.String">
+		<constructor-arg value="${clientId}"></constructor-arg>
+	</bean>
+	<bean id="deviceId" class="java.lang.String">
+		<constructor-arg value="${deviceId}"></constructor-arg>
+	</bean>
+	<bean id="test_automation_DeviceGroup_UUID" class="java.lang.String">
+		<constructor-arg value="${test_automation_DeviceGroup_UUID}"></constructor-arg>
+	</bean>
+	<bean id="mspID" class="java.lang.String">
+		<constructor-arg value="${mspID}"></constructor-arg>
+	</bean>
+	<bean id="key" class="java.lang.String">
+		<constructor-arg value="${key}"></constructor-arg>
+	</bean>
+	<bean id="secret" class="java.lang.String">
+		<constructor-arg value="${secret}"></constructor-arg>
+	</bean>
+	
+	<bean id="patchSPKey" class="java.lang.String">
+		<constructor-arg value="${patchSPKey}"></constructor-arg>
+	</bean>
+	<bean id="patchSPSec" class="java.lang.String">
+		<constructor-arg value="${patchSPSec}"></constructor-arg>
+	</bean>
+	
+	<bean id="agentFilename" class="java.lang.String">
+		<constructor-arg value="${agentFilename}"></constructor-arg>
+	</bean>
+	
+	<bean id="patchVersion" class="java.lang.String">
+		<constructor-arg value="${patchVersion}"></constructor-arg>
+	</bean>
+	
+	<bean id="client_key" class="java.lang.String">
+		<constructor-arg value="${client_key}"></constructor-arg>
+	</bean>
+	<bean id="client_sec" class="java.lang.String">
+		<constructor-arg value="${client_sec}"></constructor-arg>
+	</bean>
+	<bean id="roleId" class="java.lang.String">
+		<constructor-arg value="${roleId}"></constructor-arg>
+	</bean>
+	<bean id="cloudProviderUID" class="java.lang.String">
+		<constructor-arg value="${cloudProviderUID}"></constructor-arg>
+	</bean>
+
+	<!-- the below properties are for send mail purpose -->
+
+	<bean id="to" class="java.lang.String">
+		<constructor-arg value="${to}"></constructor-arg>
+	</bean>
+	<bean id="cc" class="java.lang.String">
+		<constructor-arg value="${cc}"></constructor-arg>
+	</bean>
+	<bean id="bcc" class="java.lang.String">
+		<constructor-arg value="${bcc}"></constructor-arg>
+	</bean>
+	<bean id="userName" class="java.lang.String">
+		<constructor-arg value="${userName}"></constructor-arg>
+	</bean>
+	<bean id="passWord" class="java.lang.String">
+		<constructor-arg value="${passWord}"></constructor-arg>
+	</bean>
+	<bean id="host" class="java.lang.String">
+		<constructor-arg value="${host}"></constructor-arg>
+	</bean>
+	<bean id="port" class="java.lang.String">
+		<constructor-arg value="${port}"></constructor-arg>
+	</bean>
+	<bean id="starttls" class="java.lang.String">
+		<constructor-arg value="${starttls}"></constructor-arg>
+	</bean>
+	<bean id="auth" class="java.lang.String">
+		<constructor-arg value="${auth}"></constructor-arg>
+	</bean>
+	<bean id="socketFactoryClass" class="java.lang.String">
+		<constructor-arg value="${socketFactoryClass}"></constructor-arg>
+	</bean>
+	<bean id="fallback" class="java.lang.String">
+		<constructor-arg value="${fallback}"></constructor-arg>
+	</bean>
+	<bean id="iterations" class="java.lang.String">
+		<constructor-arg value="${iterations}"></constructor-arg>
+	</bean>
+	<bean id="platform" class="java.lang.String">
+		<constructor-arg value="${platform}"></constructor-arg>
+	</bean>
+	<bean id="whichLogin" class="java.lang.String">
+		<constructor-arg value="${whichLogin}"></constructor-arg>
+	</bean>
+	<bean id="screeninguserAgreement" class="java.lang.String">
+		<constructor-arg value="${screeninguserAgreement}"></constructor-arg>
+	</bean>
+	<bean id="whichConfig" class="java.lang.String">
+		<constructor-arg value="${whichConfig}"></constructor-arg>
+	</bean>
+	<bean id="SendMail" class="java.lang.Boolean">
+		<constructor-arg value="${SendMail}"></constructor-arg>
+	</bean>
+	<bean id="solutionprovider_key" class="java.lang.String">
+		<constructor-arg value="${solutionprovider_key}"></constructor-arg>
+	</bean>
+	<bean id="solutionprovider_sec" class="java.lang.String">
+		<constructor-arg value="${solutionprovider_sec}"></constructor-arg>
+	</bean>
+	
+</beans>  

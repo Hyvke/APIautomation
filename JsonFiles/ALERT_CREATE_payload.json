@@ -1,0 +1,1037 @@
+[{
+		"testCase": "create alert Test case 1: create alert values",
+		"description": "create alert with default values",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 2: create alert with service name empty",
+		"description": "create alert with service name empty",
+		"jsonObject": {
+			"serviceName": "",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TODAY_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Alert service name should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 3: create alert with invalid service name",
+		"description": "create alert with invalid service name",
+		"jsonObject": {
+			"serviceName": "gfvdyetvgd",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls"
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 4: create alert service name with special characters",
+		"description": "create alert service name with special characters ",
+		"jsonObject": {
+			"serviceName": "@#$%&",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "NO data found in response"
+	},
+	{
+		"testCase": "create alert Test case 5: create alert without resource id",
+		"description": "create alert without resourceid",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": ""
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Resource id should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 8: create alert without subject",
+		"description": "create alert without subject",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Alert subject should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 9: create alert subject with special characters",
+		"description": "create alert subject with special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "#@$%@#%@&#",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 11: create alert without current state",
+		"description": "create alert without current state",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Alert current state should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 12: create alert with invalid current state",
+		"description": "create alert with invalid current state",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "nothing",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid Alert current state"
+	}, {
+		"testCase": "create alert Test case 13: create alert current state with special chaarcters",
+		"description": "create alert current state with special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "@#$%&*#",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid Alert current state"
+	}, {
+		"testCase": "create alert Test case 14: create alert without alert type",
+		"description": "create alert without alert type",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	 {
+		"testCase": "create alert Test case 16: create alert with different alert type",
+		"description": "create alert with different alert type",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "AGENT",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 17: create alert without app",
+		"description": "create alert without app",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "App should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 18: create alert with different app",
+		"description": "create alert with different app",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "Jenkins",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 19: create alert with invalid app",
+		"description": "create alert with invalid app",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "nothing",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid app received"
+	},
+	{
+		"testCase": "create alert Test case 20: create alert with app name as special characters",
+		"description": "create alert with app name as special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "@#$%&",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid app received"
+	},
+	{
+		"testCase": "create alert Test case 21: create alert without component",
+		"description": "create alert without component",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	}, {
+		"testCase": "create alert Test case 22: create alert with different component name",
+		"description": "create alert with different component name ",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "CPU",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 23: create alert component with special characters",
+		"description": "create alert component with special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "@#$&%$",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 24: create alert without description",
+		"description": "create alert without description",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": ""
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "NO data found in response"
+	},
+	{
+		"testCase": "create alert Test case 25: create alert description with special characters",
+		"description": "create alert description with special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "@#$%&$# "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 26: create alert values with different description",
+		"description": "create alert with different description",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 27: create alert on resource with all attributes",
+		"description": "create alert with all attributes",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"rtype": "laptop",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid entityType"
+	},
+	{
+		"testCase": "create alert Test case 28: create alert on resource with all resource attributes and alert attributes",
+		"description": "create alert with resource and alerts attributes",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"ipAddress": "172.36.25.58",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	}, {
+		"testCase": "create alert Test case 29: create alert on resource with id address empty",
+		"description": "create alert on resource with id address empty",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Resource IpAddress should not be null or empty"
+	}, {
+		"testCase": "create alert Test case 30: create alert on resource without resource name",
+		"description": "create alert on resource without resource name",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "",
+				"resourceName": ""
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Resource host name should not be null or empty"
+	}, {
+		"testCase": "create alert Test case 31: create alert on resource without device group",
+		"description": "create alert on resource without device group",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"rtype": "laptop",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid entityType"
+	}, {
+		"testCase": "create alert Test case 32: create alert on resource without location",
+		"description": "create alert on resource without location",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	}, {
+		"testCase": "create alert Test case 33: create alert on resource with all attributes without service name",
+		"description": "create alert on resource with all attributes without service name",
+		"jsonObject": {
+			"serviceName": "",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Alert service name should not be null or empty"
+	}, {
+		"testCase": "create alert Test case 34: create alert on resource with all attributes and with invalid service name",
+		"description": "create alert on resource with all attributes and with invalid service name",
+		"jsonObject": {
+			"serviceName": "ghftgc",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 35: create alert on resource with all attributes and subject  empty",
+		"description": "create alert on resource with subject are empty",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Alert subject should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 36: create alert on resource with all attributes and subject with special characters",
+		"description": "create alert on resource subject with special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "@#$%&$#%",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 37: create alert on resource with all attributes without current state",
+		"description": "create alert with resource without current state",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Alert current state should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 38: create alert on resource with all attributes with invalid current state",
+		"description": "create alert with resource with invalid current state",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "hello",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid Alert current state"
+	},
+	{
+		"testCase": "create alert Test case 39: create alert on resource with all attributes with current state as special characters",
+		"description": "create alert with resource with current state as special characters",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "@#$$%$#",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid Alert current state"
+	}, {
+		"testCase": "create alert Test case 40: create alert on resource with all attributes without app",
+		"description": "create alert with resource without app",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "OK",
+			"alertType": "Monitoring",
+			"app": "",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"rtype": "laptop",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "App should not be null or empty"
+	}, {
+		"testCase": "create alert Test case 41: create alert on resource with all attributes with invalid app",
+		"description": "create alert with resource with invalid app",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>",
+				"ipAddress": "172.36 .25 .58 ",
+				"hostName": "opsramp",
+				"resourceName": "laptop"
+
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "",
+			"alertType": "Monitoring",
+			"app": "@#$%&",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "OpsRamp GW Status",
+			"rtype": "laptop",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Invalid app"
+	}, {
+		"testCase": "create alert Test case 42: create alert on resource with all non manadarty fields are empty",
+		"description": "create alert with resource without current state",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "",
+			"resourceName": "",
+			"monitorName": " ",
+			"extAlertId": "",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "NO data found in response"
+	},
+	{
+		"testCase": "create alert Test case 43: create alert with external resource id ",
+		"description": "create alert with external resource id",
+		"jsonObject": {
+
+			"serviceName": "MEMORY",
+			"resource": {
+				"extResourceId": "646438712529389643",
+				"ipAddress": "172.24.132.47"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "2018-11-02 10:52:55",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"description": "Api calls ",
+			"masterAgentUUID": "5b850347-8798-45aa-9332-c7ff3dd1c60e"
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "External resource id should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 44: create alert without external id",
+		"description": "create alert without external id",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"extResourceId": "",
+				"ipAddress": "172.24.132.47"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "2018-11-02 10:52:55",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"description": "Api calls ",
+			"masterAgentUUID": "5b850347-8798-45aa-9332-c7ff3dd1c60e"
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "External resource id should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 45: create alert without ip address",
+		"description": "create alert without ip address",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"extResourceId": "646438712529389643",
+				"ipAddress": ""
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TODAY_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"description": "Api calls ",
+			"masterAgentUUID": "5b850347-8798-45aa-9332-c7ff3dd1c60e"
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "Resource IpAddress should not be null or empty"
+	},
+	{
+		"testCase": "create alert Test case 46: create alert without external & ip address are empty",
+		"description": "create alert without external & ip address are empty",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"extResourceId": "",
+				"ipAddress": ""
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TODAY_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"description": "Api calls ",
+			"masterAgentUUID": "5b850347-8798-45aa-9332-c7ff3dd1c60e"
+		},
+		"ExpectedStatusCode": "500",
+		"ExpectedMessage": "External resource id should not be null or empty"
+
+	},
+	{
+		"testCase": "create alert Test case 47: create alert with invalid ip address",
+		"description": "create alert without ip address",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"extResourceId": "646438712529389643",
+				"ipAddress": "2355644545"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TODAY_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"description": "Api calls ",
+			"masterAgentUUID": "5b850347-8798-45aa-9332-c7ff3dd1c60e"
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 62: create alert on resource with all attributes with invalid monitor name",
+		"description": "create alert with all attributes with invalid monitor name",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "fchgdrthcftrf",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 63: create alert on resource with all attributes",
+		"description": "create alert with all attributes",
+		"jsonObject": {
+			"serviceName": "MEMORY",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The Physical Memory Usage on the device is 56%.The Virtual Memory Usage on the device is 43%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"resourceName": "BVRM096",
+			"monitorName": "#$%#@$%",
+			"extAlertId": "51648654315",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 64: create alert on cpu",
+		"description": "create alert with default values",
+		"jsonObject": {
+			"serviceName": "CPU",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The cpu usage is 60%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	},
+	{
+		"testCase": "create alert Test case 65: create alert on storage",
+		"description": "create alert with default values",
+		"jsonObject": {
+			"serviceName": "STORAGE",
+			"resource": {
+				"id": "<RESOURCEID>"
+			},
+			"subject": "The storage percentage of device is above 80%.",
+			"alertTime": "<TOMORROW_DATE>",
+			"currentState": "CRITICAL",
+			"alertType": "Monitoring",
+			"app": "VISTARA",
+			"component": "MEMORY",
+			"oldState": "OK",
+			"description": "Api calls "
+		},
+		"ExpectedStatusCode": "200",
+		"ExpectedMessage": "No data found in response"
+	}
+	
+]

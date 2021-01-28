@@ -1,0 +1,62 @@
+[{
+	"testCase": "Add User To UserGroups Test case 1: Add_Users_To_UserGroups values",
+	"description": "Adding users to user group",
+	"jsonarray": [{
+			"id": "<USERID>"
+		}
+	],
+	"ExpectedStatusCode": 200,
+	"ExpectedMessage":"nothing"
+},
+	{
+	"testCase": "Add User To UserGroups Test case 2: Add user and role to UserGroups values",
+	"description": "Adding user and role to user group",
+	"jsonarray": [{
+			"id": "<USERID>",
+			"roles": [{
+		
+			"uniqueId": "<ROLEID>"
+		}]
+		}
+	],
+	"ExpectedStatusCode": 200,
+	"ExpectedMessage":"nothing"
+},
+{
+	"testCase": "Add User To UserGroups Test case 3: Add_Users_To_UserGroups without id value",
+	"description": "Adding users to user group without id value",
+	"jsonarray": [{
+			"id": ""
+		}
+	],
+	"ExpectedStatusCode": 500,
+	"ExpectedMessage":"No user found with id"
+},
+{
+	"testCase": "Add User To UserGroups Test case 4: Add_Users_To_UserGroups id with special characters value",
+	"description": "Adding users to user group id with special characters value",
+	"jsonarray": [{
+			"id": "$%^^&&&_<RANDOM>"
+		}
+	],
+	"ExpectedStatusCode": 500,
+	"ExpectedMessage":"No user found with id"
+},
+{
+	"testCase": "Add User To UserGroups Test case 5: Add_Users_To_UserGroups id with only numericals value",
+	"description": "Adding users to user group id with only numericals value",
+	"jsonarray": [{
+			"id": "123456_<RANDOM>"
+		}
+	],
+	"ExpectedStatusCode": 500,
+	"ExpectedMessage":"No user found with id"
+
+},
+{
+	"testCase": "Add User To UserGroups Test case 6: Add_Users_To_UserGroups id with request body empty",
+	"description": "Adding users to user group id with request body null",
+	"ExpectedStatusCode": 500,
+	"ExpectedMessage":"Request payload missing users information"
+
+}]

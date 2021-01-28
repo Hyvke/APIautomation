@@ -1,0 +1,11 @@
+[
+{
+	"testCase":"Add comment in KB Article Test case 1: Add comment in KB Article_Default values",
+	"description":"Add comment in KB Article with default values",
+	"jsonObject": {
+			      "comment" : "Adding Comment<RANDOM>"
+   				 },
+	"ExpectedStatusCode":"200",
+	"ExpectedMessage":"nothing"
+}
+]

@@ -1,0 +1,16 @@
+[{
+	"testCase": "Add SCIMUser To SCIMUserGroups Test case 1: Add_SCIMUsers_To_SCIMUserGroups values",
+	"description": "Adding users to user group",
+	"jsonarray":{
+			"Operations": [{
+				"op": "Add",
+				"path": "members",
+				"value": [{
+					"value": "<SCIMUSERID>"
+				}]
+			}]
+		},
+	"ExpectedStatusCode": 200,
+	"ExpectedMessage":"nothing"
+}
+]

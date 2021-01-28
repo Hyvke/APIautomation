@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<listeners>
+		<listener class-name="com.itom.Listeners.TestListener"></listener>
+		<listener class-name="com.itom.Listeners.AnnotationTransformer"></listener>
+	</listeners>
+	<parameter name="module" value="ITOM" />
+
+  <test name="Test">
+    <classes>
+      <class name="com.itom.test.tenants.PartnerAPITest">
+      	<methods>
+      		<include name="CreatePartnerAPITest" />
+      		<include name="SearchPartnerAPITest"/>
+      		<include name="getPartnerAPITest"/>
+      	    <include name="UpdatePartnerAPITest"/>
+      	</methods>
+      </class>
+      
+      <class name="com.itom.test.tenants.ClientAPITest">
+     	 <methods>
+     		 <include name="createClientAPITest"/>
+     		 <include name="getClientAPITest"/>
+     		 <include name="getMinimalClientAPITest"/>
+     		 <include name="searchClientAPITest"/>
+     		 <include name="updateClientAPITest"/>
+    	  </methods>
+      </class>
+      
+      <class name="com.itom.test.Agent.AgentAPITest">
+      	<methods>
+      		<include name="downloadLinuxAgent"/>
+      		<include name="downloadLinuxAgentInstallationScript"/>
+      		<include name="downloadWindowsAgent"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.configuration.ConfigurationAPITest">
+      	<methods>
+      		<include name="getAlertTechnologiesAPITest"/>
+      		<include name="getChannelsAPITest"/>
+      		<include name="getCountriesAPITest"/>
+      		<include name="getDeviceTypesAPITest"/>
+      		<!-- <include name="getTenantNocAPITest"/> -->
+      		<include name="getTimeZonesAPITest"/>
+      		</methods>
+      </class>
+      <class name="com.itom.test.reports.ReportsAPITest">
+      	<methods>
+      		<include name="createReportFolderAPITest"/>
+      		<include name="createCustomReportAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.tenants.UserAPITest">
+      	<methods>
+      		<include name="CreateUserAPITest"/>
+      		<include name="getUserAPITest"/>
+      		<include name="searchUserAPITest"/>
+      		<include name="searchSPUserAPITest"/>
+      		<include name="updateuserAPITest"/>
+      		<include name="getMinimalUserAPITest"/>
+      		<include name="forgotPasswordAPITest"/>
+      		
+      	</methods>
+      </class>
+       <class name="com.itom.test.tenants.RolesAPITest">
+      	<methods>
+      		<include name="createRoleAPITest"/>
+      		<include name="getRoleAPITest"/>
+      		<include name="searchRoleAPITest"/>
+      		<include name="updateRoleAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.tenants.UserGroupsAPITest">
+      	<methods>
+      		<include name="createUserGroupAPITest"/>
+      		<include name="addUserToUserGroupAPITest"/>
+      		<include name="getUserGroupIdAPITest"/>
+      		<include name="getUsersOfUserGroupAPITest"/>
+      		<include name="searchUserGroupsAPITest"/>
+      		<include name="removeUsersFromUserGroupAPITest"/>
+      		<include name="updateUserGroupAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.tenants.ClientNoteAPITest">
+      		<methods>
+      			<include name="createClientNoteAPITest"/>
+      			<include name="getClientNoteDetailsAPITest"/>
+      			<include name="searchClientNotesAPITest"/>
+      			<include name="updateClientNoteAPITest"/>
+      			<include name="deleteClientNoteAPITest"/>
+      		</methods>
+      </class>
+      
+      	<class name="com.itom.test.Infrastructure.ManagementProfilesAPITest">
+			<methods>
+				<include name="createProfileAPITest"/>
+				<!-- <include name="getProfileAPITest"/>
+	      		<include name="searchProfileAPITest"/>
+	      		<include name="detachgatewayfromprofileAPITest"/>
+	      		<include name="attachgatewaytoprofileAPITest"/>   		
+	      		<include name="reconnectTunnelAPITest"/> -->
+			</methods>
+		</class>
+      
+      <class name="com.itom.test.Infrastructure.DeviceAPIClassTest">
+      	<methods>
+      		<include name="createDeviceAPITest"/>
+      		<include name="getDeviceAPITest"/>
+      		<include name="getMinimalDeviceTypesAPITest"/>
+      		<include name="getMinimalDevicesAPITest"/>
+      		<include name="getDeviceApplicationsAPITest"/>
+      		<include name="unmanageDeviceAPITest"/>
+      		<include name="manageDeviceAPITest"/>
+      		<include name="updateDeviceAPITest"/>
+      		<include name="searchDevicesAPITest"/>
+      	</methods>
+      </class>
+     
+	    <class name="com.itom.test.Infrastructure.NewDeviceGroupsAPITest">
+			    <methods>
+				    <include name="create_New_DeviceGroupAPITest"/>
+				    <include name="get_New_DeviceGroupAPITest"/>     
+				    <include name="update_New_DeviceGroupAPITest"/>
+				    <include name="assign_New_childDeviceGroupAPITest"/>
+				    <include name="get_New_minimaldevicegroupAPITest"/>
+				    <include name="get_New_rootdevicegroupAPITest"/>
+				    <include name="get_New_devicegroupchildAPITest"/>
+				    <include name="unassign_New_childDeviceGroupAPITest"/>
+			   </methods> 
+	   </class>  
+      <!-- <class name="com.itom.test.Infrastructure.DeviceGroupsAPITest">
+      	     <methods>
+	      		 <include name="createDeviceGroupAPITest"/>      		 
+	      		 <include name="getDeviceGroupAPITest"/>
+	      		 <include name="getDeviceGroupsAPITest"/>
+	      		 <include name="getMinimalDeviceGroupsAPITest"/>      		 
+	      		 <include name="updateDeviceGroupAPITest"/>
+	      		<include name="searchDeviceGroupsAPITest"/>
+      		 </methods>
+      </class>-->
+      <class name="com.itom.test.Infrastructure.DeviceNotesAPIClassTest">
+      	<methods>
+      		<include name="createDeviceNoteAPITest"/>
+      		<include name="searchDeviceNotesAPITest"/>
+      		<include name="upateDeviceNoteAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.Infrastructure.CredentialSetsTest">
+      	<methods>
+      		<include name="createCredentialSetAPITest"/>
+      		<include name="getClientMinimalCredentialSetsAPITest"/>
+      		<include name="getCredentialSetAPITest"/>
+      		<include name="getCredentialSetsAPITest"/>
+      		<include name="getDeviceMinimalCredentialSetsAPITest"/>
+      		<include name="updateCredentialSetAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.Infrastructure.ResourceAPITest">
+      	<methods>
+      		<include name="createResourceAPITest"/>
+      		<include name="getMinimalResourceTypesAPITest"/>
+      		<include name="getMinimalResourcesAPITest"/>
+      		<include name="getResourceAPITest"/>
+      		<include name="getResourceApplicationsAPI"/>
+      		<include name="searchResourcesAPITest"/>
+      		<include name="updateResourceAPITest"/>
+      	</methods>
+      </class>
+       <class name="com.itom.test.Infrastructure.InventoryAPITest">
+      	<methods>
+      		<include name="getCircuitCardsAPITest"/>
+      		<include name="getLicenseAPITest"/>
+      		<include name="getPortsAPITest"/>
+      		<include name="getRegistrationsAPITest"/>
+      		<include name="getTrunksAPITest"/>
+      		<include name="getDiskDrivesAPITest"/>
+      		<include name="getOOBInterface"/>
+      	</methods>
+      </class> 
+      
+      <class name="com.itom.test.alert.AlertCorrelationPolicesAPITest">
+      	<methods>
+      		<include name="createAlertCorrelationPolicy"/>
+      		<include name="getAlertCorrelationPolicy"/>
+      		<include name="getAlertCorrelationPoliciesOfClient"/>
+      		<include name="EnableDisableAlertCorrelationPolicy"/>
+      		<include name="updateAlertCorrelationPolicy"/>
+      		<include name="deleteAlertCorrelationPolicy"/>
+      	</methods>
+      </class>
+      
+       <class name= "com.itom.test.Infrastructure.ManagementPoliciesAPITest">
+	     	<methods>
+		     	<include name="createDeviceManagementPolicyAPITest"/>	
+		     	<include name="getDeviceManagementPoliciesAPITest"/>
+		     	<include name="getDeviceManagementPolicyAPITest"/>
+		     	<include name="runDeviceManagementPolicyAPITest"/> 
+		     	<!-- <include name="searchDeviceManagementPoliciesAPITest"/>
+		     	<include name="updateDeviceManagementPolicyAPITest"/> -->
+		     	<include name="deleteDeviceManagementPolicyAPITest"/>
+	     	</methods>
+     	</class>
+	
+		<!-- <class name="com.itom.test.Infrastructure.DiscoveryProfilesAPITest">
+	     	 <methods>
+	     		 <include name="create_AWS_DiscoveryProfileAPITest"/>    		   
+	         </methods>
+  		</class> -->
+		<class name="com.itom.test.reports.ReportsAPITest">
+      	<methods>
+      		<include name="createReportFolderAPITest"/>
+      		<include name="createCustomReportAPITest"/>
+      		<include name="searchReportAPITest"/>
+      		<include name="downloadableListReportAPITest"/>
+      		<!-- <include name="downloadReportAPITest"/> -->
+      		<include name="deleteReportAPITest"/>
+      		<include name="deleteReportFolderAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.alert.RostersAPITest">
+      		<methods>
+	      		<include name="createRosterAPITest"/>
+	      	  	<include name="getRosterAPITest"/>
+	      		<include name="searchRosterAPITest"/>
+	      		<include name="updateRosterAPITest"/>
+	      		
+      		</methods>
+      </class>
+       <class name="com.itom.test.alert.AlertEscalatePolicyAPITest">
+      		<methods>
+	      		<include name="createEscalatePolicyAPITest"/>
+	      		<include name="getEscalatePolicyAPITest"/>
+	      		<include name="updateEscalatePolicyAPITest"/>
+	      		<include name="searchEscalatePolicyAPITest"/>
+	         	<include name="disableEscalatePolicyAPITest"/>
+	      		<include name="enableEscalatePolicyAPITest"/>
+	      	  	<include name="observedEscalatePolicyAPITest"/>  
+	      		<include name="deleteEscalatePolicyAPITest"/>
+      		</methods>
+      </class>
+		<class name="com.itom.test.knowledgebase.KBCategoryAPITest">
+	      <methods>
+		      <include name="createKBCategoryAPITest"/>
+		      <include name="GetKBCategoryAPITest"/>
+		      <include name="UpdateKBCategoryAPITest"/>
+		      <include name="KBCategoryListAPITest"/>
+	      </methods>
+      </class>
+      <class name="com.itom.test.knowledgebase.KBArticlesAPITest">
+     	  <methods>
+     		 <include name="createKBArticleAPITest"/>
+     		 <include name="getKBArticleAPITest"/>
+     		 <include name="addComment_KBArticleAPITest"/>
+     		 <include name="getKBArticleActivityAPITest"/>
+     		 <include name="getKBArticleListByCategoryAPITest"/>
+     		 <include name="getCommentsListOfKBArticleAPITest"/>
+     		 <include name="update_shareKBArticleAPITest"/>
+     		 <include name="updateKBArticleAPITest"/>
+     		 <include name="searchKBArticlesAPITest"/>
+     		 <include name="deleteKBArticleAPITest"/>	
+     		 <!-- 
+     		  <include name="getAttachmentByKBArticleAPITest"/>
+     		  <include name="getAttachmentsByComment_KB_APITest"/>
+     		  -->		 
+    	  </methods>
+      </class>
+		<class name="com.itom.test.servicedesk.ServiceResquestAPITest">
+			<methods>
+				<include name="createServiceRequestAPITest"/>
+				<include name="getServiceRequestAPITest"/>
+				<include name="searchServiceRequestsAPITest"/>
+				<include name="getServiceRequestActivityLogAPITest"/>
+				<include name="addServiceRequestResponseAPITest"/>
+				<include name="getServiceRequestResponsesAPITest"/>
+				<include name="updateServiceRequestAPITest"/>
+				<include name="createServiceRequestCategoryAPITest"/>
+      			<include name="updateServiceRequestCategoryAPITest"/>
+			</methods>			
+		</class>
+		<class name="com.itom.test.servicedesk.IncidentAPITest">
+			<methods>
+				<include name="createIncidentCategoryAPITest"/>
+				<include name="createIncidentAPITest"/>
+				<include name="getIncidentAPITest"/>
+				<include name="searchIncidentsAPITest"/>
+				<include name="updateIncidentAPITest"/>
+				<include name="getIncidentActivityLogAPITest"/>
+				<!-- <include name="addIncidentResponseAPITest"/> -->
+				<include name="getIncidentResponseAPITest"/>
+      			<include name="updateIncidentCategoryAPITest"/>	
+      			<include name="createIncidentUrgencyAPITest"/>
+	      		<include name="updateIncidentUrgencyAPITest"/>
+	      		<include name="createIncidentBusinessImpactAPITest"/>
+	      		<include name="updateIncidentBusinessImpactAPITest"/>
+	      		<include name="createOrUpdateIncidentForwardMappingAPITest"/>
+	      		<include name="createOrUpdateIncidentReverseMappingAPITest"/>
+	      		<include name="getIncidentForwardMappingAPITest"/>
+	      		<include name="getIncidentReverseMappingAPITest"/>
+      			<include name="getIncidentUrgenciesAPITest"/>
+     			<include name="getIncidentBusinessImpactsAPITest"/>		
+			</methods>		
+		</class>
+		<class name="com.itom.test.servicedesk.ChangeRequestAPITest">
+      	<methods>
+      		<include name="createChangeRequestAPITest"/>
+      		<include name="getChangeRequestAPITest"/>
+      		<include name="searchChangeRequestsAPITest"/>
+      		<include name="updateChangeRequestsAPITest"/>
+      		<include name="addChangeRequestResponseAPITest"/>
+      		<include name="getChangeRequestResponseAPITest"/>
+      		<include name="getChangeRequestActivityLogAPITest"/>
+      		<include name="createChangeRequestCategoryAPITest"/>
+      		<include name="updateChangeRequestCategoryAPITest"/>
+      	</methods>
+      </class>
+       <class name="com.itom.test.servicedesk.ProblemsAPITest">
+      	<methods>
+      		<include name="createProblemAPITest"/>
+      		<include name="getProblemAPITest"/>
+      		<include name="searchProblemsAPITest"/>
+      		<include name="updateProblemAPITest"/>
+      		<include name="addResponseToProblemAPITest"/>
+      		<include name="getResponsesFromProblemAPITest"/>
+      		<include name="getProblemActivityLogAPITest"/>
+      		<include name="closeProblemAPITest"/>
+      		<include name="createProblemCategoryAPITest"/>
+      		<include name="updateProblemCategoryAPITest"/>
+      	</methods>
+      </class>
+       <class name="com.itom.test.servicedesk.TaskAPITest">
+      	<methods>
+      		<include name="createTaskAPITest"/>
+      		<include name="getTaskAPITest"/>
+      		<include name="searchTasksAPITest"/>
+      		<include name="updateTaskAPITest"/>
+      		<include name="addResponseToTaskAPITest"/>
+      		<include name="getResponseFromTaskAPITest"/>
+      		<include name="getTaskActivityLogAPITest"/>
+      		<include name="closeTaskAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.servicedesk.TimeBounRequestAPITest">
+      	<methods>
+      		<include name="createTimeBoundRequestAPITest"/>
+      		<include name="getTimeBoundRequestAPITest"/>
+      		<include name="searchTimeBoundRequestsAPITest"/>
+      		<include name="updateTimeBoundRequestAPITest"/>
+      		<include name="addResponseToTimeBoundRequestAPITest"/>
+      		<include name="getResponsesFromTimeBoundRequestAPITest"/>
+      		<include name="getTimeBoundRequestActivityLogAPITest"/>
+      		<include name="closeTimeBoundRequestAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.servicedesk.ServiceDeskCustomFormsAPITest">
+      	<methods>
+      		<include name="getServiceRequestCustomFormAPI"/>
+      		<include name="getIncidentCustomFormAPITest"/>
+      		<include name="getChangeRequestCustomFormAPITest"/>
+      		<include name="getProblemCustomFormAPITest"/>
+      		<include name="getTaskCustomFormAPITest"/>
+      		<include name="getTimeBoundRequestCustomFormAPITest"/>
+      	</methods>
+      </class>
+      <class name="com.itom.test.servicedesk.ServiceDeskStatusChangeReasonAPITest">
+      	<methods>
+      		<include name="createServiceDeskStatusChangeReasonAPITest"/>
+      		<include name="getServiceDeskStatusChangeReasonAPITest"/>
+      		<include name="updateServiceDeskStatusChangeReasonAPITest"/>
+      		<include name="getServiceDeskStatusChangeReasonsAPITest"/>
+      		<include name="getServiceDeskStatusChangeReasonsByClientAPITest"/>
+      		<include name="searchServiceDeskSLAPoliciesAPITest"/>
+      		<include name="getServiceDeskCategoriesByTicketTypeAPITest"/>
+      		<include name="getServiceDeskCustomFieldsAPITest"/>
+      	</methods>
+      </class>
+       <class name="com.itom.test.alert.AlertAPITest">
+     		 <methods>
+				  <include name="createAlertAPITest"/>
+		 		  <include name="createAlertsAPITest"/> 
+		 		  <include name="searchAlertAPITest"/>
+		  		  <include name="updateIncidentIdwithAlertAPITest"/>
+		  <!--	  <include name="attachIncidentToAlertAPITest"/>  -->
+	     		  <include name="alertViewsOfUserAPITest"/> 
+		 		  <include name="alertStatusHistoryAPITest"/> 
+		 		  <include name="alertOccurrencesAPITest"/> 
+	     		  <include name="alertByAlertIdAPITest"/>
+		 		  <include name="alertByIncidentIdAPITest"/> 
+		 		  <include name="postAlertActionAPITest"/> 
+		 		  <include name="alertacknowledgeAPITest"/>
+		 <!-- 	  <include name="alertCommentsAPITest"/> -->
+		 		  <include name="getAlertAPITest"/>
+	   	 		  <include name="availableSubAlertTypesAPITest"/> 
+	   	 		  <include name="getAlertTypesAPITest"/> 
+     		 </methods>
+     	 </class> 
+     	<!--  <class name="com.itom.test.alert.FirstResponsePoliciesAPITest">
+       		  <methods>
+			     <include name="createFirstResponseAPITest"/>
+			     <include name="getFirstResponseAPITest"/>
+			     <include name="deleteFirstResponseAPITest"/>
+			     <include name="updateFirstResponsePolicyAPITest"/>
+			     <include name="getFirstResponsePolicyByClientAPITest"/>
+			     <include name="enable_Disable_ObservedFirstResponsePolicyAPITest"/>
+    	      </methods>
+    	   </class> --> 
+		<class name ="com.itom.test.Infrastructure.SitesAPITest">
+			<methods>
+				<include name="createSiteAPITest"/>
+				<include name="getMinimalSitesAPITest"/>
+				<include name="searchSitesAPITest"/>
+				<include name="updateSiteAPITest"/>
+			</methods>
+		</class>
+		<class name="com.itom.test.Infrastructure.RemoteConsolesAPITest">
+		<methods>
+			<include name="createConsoleAPITest"/>
+			<include name="getConsolesAPITest"/>
+		</methods>
+	</class>
+		<class name="com.itom.test.Infrastructure.AuditRecordingsAPITest">
+	       <methods>
+	           <include name="getConsoleAccessHistoryAPITest"/>
+	           <include name="getDeviceRecordingsAPITest"/>
+	           <include name="getResourceAuditActivitiesAPITest"/>
+	           <include name="getTicketRecordingsAPITest"/>     
+	       </methods>
+	     </class>  
+     
+       <class name="com.itom.test.knowledgebase.TemplatesAPITest">
+      <methods> 
+         <include name="createKBTemplateAPITest"/>
+          <include name="getKBTemplateAPITest"/>
+          <include name="updateKBTempateAPITest"/>
+          <include name="getKBTemplateListByCategoryAPITest"/>
+          <include name="deleteKBTemplateAPITest"/>
+      </methods>
+      </class>
+      <class name="com.itom.test.notifications.NotificationTemplateAPITest">
+     	 <methods>
+     		 <include name="createNotificationTemplateAPITest"/>
+     		 <include name="getNotificationTemplateAPITest"/>
+     		 <include name="updateNotificationTemplateAPITest"/>
+     		<!--  <include name="deleteNotificationTemplateAPITest"/> Have to update response code to 200 in excel-->	 
+    	  </methods>
+      </class> 
+      <class name="com.itom.test.custom_attributes.CustomAttributesAPIClassTest">
+     	 <methods>
+     	 	 <include name="createCustomAttribute_SP_APITest"/>
+     		 <include name="createCustomAttribute_partnerAPITest"/>
+     		 <include name="createCustomAttribute_clientAPITest"/>
+     		    
+     		 <include name="updateSPCustomAttributeAPITest"/>  		 
+     		 <include name="updateClientCustomAttributeAPITest"/>
+     		 <include name="updatePartnerCustomAttributeAPITest"/>
+     		 
+     		 <include name="getSPCustomAttributeWithItsValueAPITest"/>  
+     		 <include name="getClientCustomAttributeAndItsValueAPITest"/> 
+     		 <include name="getPartnerCustomAttributeAndItsValueAPITest"/> 
+     		 
+     		 <include name="searchSPCustomAttributeAPITest"/> 
+     		 <include name="searchClientCustomAttributeAPITest"/> 
+     		 <include name="searchPartnerCustomAttributeAPITest"/>
+     		 
+     		 <include name="updateSPCustomAttributeValueAPITest"/> 
+     		 <include name="updateClientCustomAttributeValueAPITest"/> 
+     		 <include name="updatePartnerCustomAttributeValueAPITest"/>
+     		
+     		 <include name="assignPartnerToCustomAttributeAPITest"/> 
+     		<!--  <include name="assignClientToCustomAttributeAPITest"/>  -->
+     		 <include name="assignDevicesToCustomAttributeAPITest"/>
+     		 
+     		 <include name="searchAssignedEntitiesByCustomAttributes_SP_APITest"/>
+     		 <include name="searchAssignedEntitiesByCustomAttributes_partner_APITest"/>
+     		 <include name="searchAssignedEntitiesByCustomAttributes_client_APITest"/>
+     		 
+     		 <include name="getPartnerAssignedCustomAttributesAPITest"/>
+     		 <include name="getClientAssignedCustomAttributesAPITest"/>
+     		 <include name="getDeviceAssignedCustomAttributesAPITest"/>
+     		 
+     		 <include name="unAssignDevicesFromCustomAttributeAPITest"/>
+     		<!--  <include name="unAssignClientsFromCustomAttributeAPITest"/> -->
+     		 <include name="unAssignPartnersFromCustomAttributeAPITest"/>
+     		      		 
+     		 <include name="deleteSPCustomAttributeAPITest"/>
+     		 <include name="deleteClientCustomAttributeAPITest"/>
+     		 <include name="deletePartnerCustomAttributeAPITest"/> 
+    	  </methods>
+    	</class>  
+      <class name="com.itom.test.integrations.IntegrationsAPITest">
+      	<methods>
+      		<include name="searchInstalledIntegrationsAPITest"/>
+      		<include name="searchAvailableIntegrationsAPITest"/>
+      		<include name="installIntegrationAPITest"/>
+      		<include name="install_WindowsPatch_IntegrationAPITest"/>
+      		<include name="createIntegration_EventAPITest"/>
+      		<include name="getEventsOfInstalledIntegrationAPITest"/>
+      		<include name="getIntegration_EventAPITest"/>
+      		<include name="getIntegration_Event_PlaceHoldersAPITest"/>
+      		<include name="updateIntegration_EventAPITest"/>
+      		<include name="activateIntegration_EventAPITest"/>
+      		<include name="deactivateIntegration_EventAPITest"/>
+      		<include name="activateIntegration_EventAPITest"/>
+      		<include name="deleteIntegration_EventAPITest"/>
+      		
+      		<include name="createOrUpdateInBoundAuthenticationAPITest"/>
+      		<include name="createOrUpdateInstalledIntegrationMappingAPITest"/>
+      		<include name="createOrUpdateInstalledIntegrationBaseNotifierAPITest"/>
+      		<!-- <include name="createOrUpdateIntegrationFailureNotifierAPITest"/>Raise a jira  ITOM-31509 -->
+      		<include name="getIntegrationMappablePropertiesAPITest"/>
+      		<include name="getIntegrationActivityAPITest"/>
+      		<include name="getIntegrationMappingsAPITest"/>
+      		<include name="disasbledInstalledIntegrationAPITest"/>
+      		<include name="enableInstalledIntegrationAPITest"/>
+      		<include name="resetIntegrationMappingsAPITest"/>
+      		
+      		
+      		<include name="installEmailIntegrationAPITest"/>
+      		<include name="getConfigurableEmailPropertiesAPITest"/>
+      		<!-- <include name="searchMonitorableResourcesAPITest"/>
+      		<include name="searchNon_MonitorableResourcesAPITest"/>
+      		<include name="updateInstalledIntegrationAPITest"/> -->
+      	</methods>
+      </class>
+      <class name="com.itom.test.integrations.SSOIntegrationsAPITest">
+     	<methods>
+     		<include name="install_SSO_IntegrationAPITest"/>
+     		<include name="get_SSO_Installed_IntegrationAPITest"/>
+     		<include name="update_SSO_IntegrationAPITest"/>
+     		<include name="uninstall_SSO_IntegrationAPITest"/>
+     	</methods>
+     </class>
+     <class name="com.itom.test.integrations.CloudIntegrationsAPITest">
+     	<methods>
+     		<include name="install_AWS_IntegrationAPITest"/>
+     		<include name="install_Azure_IntegrationAPITest"/>
+     		<include name="install_Google_IntegrationAPITest"/>
+     	</methods>
+     </class>
+     <class name="com.itom.test.integrations.CollaborationIntegrationsAPITest">
+     	<methods>
+     		<!-- <include name="install_Collaboration_IntegrationAPITest"/> -->
+     		<include name="install_AND_Configure_AWS_SupportAPITest"/>
+     	</methods>
+     </class>
+      <class name="com.itom.test.integrations.ComputeIntegrationsAPITest">
+     	<methods>
+     		<!-- <include name="download_Kubernets_ConfigFileAPITest"/> -->
+     		<include name="install_Kubernets_IntegrationsAPITest"/>
+     	</methods>
+     </class>
+     <class name="com.itom.test.integrations.MonitoringIntegrationsAPITest">
+	      	<methods>
+	      		<include name="install_NewRelic_IntegrationAPITest"/>
+	      		<include name="install_Pingdom_IntegrationAPITest"/>
+	      	</methods>
+      </class>
+       <class name="com.itom.test.patch.FeedAPITest">
+     	 <methods>
+     		 <include name="searchPatchesByClientAPITest"/>
+     		 <!--  <include name="createOrUpdatePatchFeedAPITest"/>
+     		  <include name="getPatchFeedAPITest"/>
+     		  <include name="deletePatchFeedAPITest"/> -->
+     	</methods>
+      </class>
+      <class name="com.itom.test.patch.BaseLineAPITest">
+     	 <methods>
+     		 <include name="createBaseLineAPITest"/>
+     		 <include name="getBaseLinesAPITest"/>
+     		 <include name="updateBaseLineAPITest"/>
+     		 <include name="getPatchesAPITest"/>
+     		<!--  <include name="assignOrUnassignBaseLinePatchAPITest"/> -->
+     		 <include name="activateOrDeactivateBaseLineAPITest"/>
+     	</methods>
+      </class>
+      <class name="com.itom.test.patch.ComplianceAPITest">
+     	 <methods>
+     		 <include name="createComplianceAPITest"/>
+     		 <include name="getAllComplinacesByClientAPITest"/>
+     		 <include name="updateComplianceAPITest"/>
+     		 <include name="getCompliancesOfResourceAndBaseLineAPITest"/>
+     		 <include name="getBaseLineDetailsOfComplianceAPITest"/>
+     		 <include name="getDeviceGroupsDetailsOfComplianceAPITest"/>
+     		 <include name="getDevicesDetailsOfComplianceAPITest"/>
+     		 <include name="assignUnassignBaseLineAPITest"/>
+     		 <!-- <include name="assignUnassignDeviceAPITest"/> -->
+     		 <include name="assignUnassignDeviceGroupAPITest"/>
+     		 <include name="runComplianceAPITest"/>
+     		 <include name="deleteComplianceAPITest"/>
+     	</methods>
+      </class>
+       <class name="com.itom.test.patch.PatchAPITest">
+      		<methods>
+      			<!-- <include name="approveUnapprovePatchAPITest"/> -->
+      			<include name="getPatchScanStatusOfResourceAPITest"/>
+      			<include name="getPatchingStatusOfResourceAPITest"/>
+      			<include name="getResourcePatchesAPITest"/>
+      			<!-- <include name="getPatchScanStatusOfAllDevicesInMissingJobAPITest"/>
+      			<include name="getPatchingStatusOfAllDevicesInPatchConfigAPITest"/> -->
+      		</methods>
+      </class>
+      <class name="com.itom.test.maintenance.JobsAPITest">
+      		<methods>
+      			<include name="getJobTypesAPITest"/>
+      			<include name="createJobAPITest"/>
+      			<include name="searchJobsAPITest"/>
+      			<include name="getJobAPITest"/>
+      			<include name="updateJobAPITest"/>
+      			<!-- <include name="runJobAPITest"/> -->
+      			<include name="assignDevicesAPITest"/>
+      			<include name="unAssignDevicesAPITest"/>
+      			<include name="deleteJobAPITest"/>
+      		</methods>
+      </class>
+      <class name="com.itom.test.dependency.DependencyAPITest">
+      	<methods>
+      		<include name="createImpactDependencyAPITest"/>
+      		<include name="getImpactDependencyAPITest"/>
+      		<include name="deleteImpactDependencyAPITest"/>	
+      		 </methods>
+      </class>
+      <class name="com.itom.test.topology.TopologyAPITest">
+      	     <methods>
+      		    <include name="Get_List_Of_Interfaces_Per_DeviceAPITest"/>
+      		    <include name="Get_List_Of_UnManaged_DevicesAPITest"/>
+      		    <include name="Get_List_Of_VLAN_Available_for_DeviceAPITest"/>
+      		    <include name="Get_List_Of_Vertices_By_EdgePropertyAPITest"/>    		    
+      		    <include name="Get_Neighbours_Of_Given_DeviceAPITest"/> 
+      		    <include name="Get_Topology_By_ResourceIdAPITest"/>
+      		    <include name="Get_Topology_Data_By_IpAddressAPITest"/>      		    
+      		 </methods>
+      </class>
+      <class name="com.itom.test.service_catalogs.ServiceCatalogsAPITest">
+ 	 	 <methods>
+ 	 		 <include name="createServiceCatalogCategoryAPITest"/>
+ 	 		 <include name="getServiceCatalogCategoryAPITest"/>
+ 			 <include name="getServiceCatalogCategoriesAPITest"/>
+ 			 <include name="updateServiceCatalogCategoryAPITest"/>
+ 			 <include name="deleteServiceCatalogCategoryAPITest"/>
+ 	 	 </methods>
+ 	  </class>
+		<!-- <class name="com.itom.test.Infrastructure.ServiceGroupAPITest">
+			<methods>
+				<include name="createServiceGroupAPITest"/>
+				<include name="getServiceGroupAPITest"/>
+				<include name="getMinimalServicegroupsAPITest"/>
+				<include name="getRootServiceGroupsAPITest"/>
+				<include name="assignChildsAPITest"/>
+				<include name="getServiceGroupChildsAPITest"/>
+				<include name="unAssignChildsAPITest"/>
+				<include name="getServiceGroupAvailabilityAPITest"/>
+				<include name="linkServiceGroupsAPITest"/>
+				<include name="unlinkServiceGroupsAPITest"/>
+				<include name="updateServiceGroupAPITest"/>
+				<include name="deleteServicegroup"/>
+			</methods>
+		</class> -->
+		<class name="com.itom.test.monitoring.createMonTemplates">
+			<methods>
+				<include name="createMonTemplates"/>
+				<include name="getMonTemplates"/>
+				<include name="searchMonTemplates"/>
+			</methods>
+		</class>
+		
+	<!--	<class name="com.itom.test.exports.ExportsAPITest">
+			<methods>
+				<include name="createOnDemandDataExport"/>
+				<include name="createDailyDataExport"/>
+				<include name="createWeeklyDataExport"/>
+				<include name="createMonthlyDataExport"/>
+			</methods>
+		</class>-->
+		
+		<!-- <class name="com.itom.test.APIs540.scimUserAPITest">
+      	<methods>
+      		<include name="createScimUserAPI"/>
+      		<include name="getScimUserAPI"/>
+      		<include name="searchScimUserAPI"/>
+      		<include name="patchScimUserAPI"/>
+      		<include name="updateScimUserAPI"/>
+      		<include name="deactivateScimUserAPI"/>
+      	</methods>
+      </class>
+      
+      <class name="com.itom.test.APIs540.scimGroupAPITest">
+      	<methods>
+      		<include name="createScimgGroup"/>
+      		<include name="getScimgGroup"/>
+      		<include name="searchScimgGroup"/>
+      		<include name="assignUsertoScimgGroup"/>
+      		<include name="unassignUserFromScimgGroup"/>
+      		<include name="updateScimgGroup"/>
+      		<include name="deleteScimgGroup"/>
+      	</methods>
+      </class> -->
+		</classes>
+     </test>
+     <test name="test2">
+    <classes>
+    		<class name="com.itom.test.patch.BaseLineAPITest">
+     	 		<methods>
+     	 		 <include name="deleteBaseLineAPITest"/>
+     	 		  </methods>
+			</class>
+			 <class name="com.itom.test.integrations.IntegrationsAPITest">
+		      	<methods>
+		      		<include name="uninstallIntegrationAPITest"/>
+		      	</methods>
+	      	</class>
+    		 <class name="com.itom.test.knowledgebase.KBCategoryAPITest">
+			      <methods>
+			      		 <include name="DeleteKBCategoryAPITest"/>
+			     		 <include name="restoreKBCategoryAPITest"/>
+			      </methods>
+			</class>
+    		<!-- <class name="com.itom.test.servicedesk.ServiceResquestAPITest">
+				<methods>
+					<include name="closeServiceRequestAPITest"/>
+				</methods>
+			</class> ####Raise a JIRA ITOM-31679-->
+			<class name="com.itom.test.servicedesk.IncidentAPITest">
+				<methods>
+					<include name="closeIncidentAPITest"/>
+				</methods>
+			</class>
+			<class name="com.itom.test.servicedesk.ChangeRequestAPITest">
+	      		<methods>
+	      			<include name="closeChangeRequestAPITest"/>
+	      		</methods>
+      		</class>
+    		<class name ="com.itom.test.Infrastructure.SitesAPITest">
+    			 <methods>
+    				<include name="deleteSiteAPITest"/>
+    			</methods>
+    		</class>	
+    		<class name="com.itom.test.Infrastructure.ManagementProfilesAPITest">
+    			 <methods>
+    			 	<include name="updateProfileAPITest"/>
+					<include name="deleteProfileAPITest"/>
+				</methods>	
+			</class>
+    	 <class name="com.itom.test.Infrastructure.CredentialSetsTest">
+	      <methods>
+	      	<include name="deleteCredentialSetAPITest"/>
+	      </methods>
+      </class>
+      <!-- <class name="com.itom.test.Infrastructure.DeviceGroupsAPITest">
+		    <methods>
+     		<include name="deleteDeviceGroupAPITest"/>
+     	</methods>
+     </class>-->
+      <class name="com.itom.test.Infrastructure.NewDeviceGroupsAPITest">
+			<methods>
+			   <include name="delete_New_DeviceGroupAPITest"/>
+			</methods>
+	 </class>
+      <class name="com.itom.test.Infrastructure.ResourceAPITest">
+      	<methods>
+      		<include name="deleteResourceAPITest"/>
+      		
+      	</methods>
+      </class>
+      <class name="com.itom.test.alert.RostersAPITest">
+      <methods>
+        <include name="deleteRosterAPITest"/> 
+        </methods>
+        </class>
+      <class name="com.itom.test.tenants.UserGroupsAPITest">
+      	<methods>
+      	<include name="deleteUserGroupAPITest"/>
+      	</methods>
+      </class>
+        <class name="com.itom.test.tenants.ClientAPITest">
+     	 <methods>
+     		 <include name="activateordeactivateClientAPITest"/>
+    	  </methods>
+      </class>
+    	
+    	<class name="com.itom.test.tenants.PartnerAPITest">
+      	<methods>
+      		<include name="SuspendPartnerAPITest" />
+      		<include name="ActivatePartnerAPITest"/>
+      		<include name="TerminatePartnerAPITest"/>
+      	</methods>
+      </class>
+      
+    </classes>
+  </test>
+ 
+ 
+</suite> <!-- Suite -->
